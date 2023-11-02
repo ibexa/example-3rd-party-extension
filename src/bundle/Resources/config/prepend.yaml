@@ -1,0 +1,26 @@
+# Prepended configuration: first level key is an extension name.
+
+#ibexa:
+#    system:
+#        default:
+ibexa_fieldtype_page:
+  blocks:
+    currency_exchange:
+      name: Currency exchange
+      thumbnail: /assets/images/blocks/random_block.svg#random
+      views:
+        default:
+          template: '@ibexadesign/blocks/currency_exchange/default.html.twig'
+          name: Currency exchange block
+      attributes:
+        amount:
+          type: integer
+          name: Amount
+        base_currency:
+          type: select
+          name: Base currency
+          options:
+            choices:
+              'US Dollar': USD
+              'EURO': EUR
+              'Polish Zloty': PLN
